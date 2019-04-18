@@ -1,0 +1,250 @@
+@import './element-ui.scss';
+@import './mixins.scss';
+
+@font-face {
+  font-family: 'iconfont';  /* project id 593527 */
+  src: url('//at.alicdn.com/t/font_593527_otm8r6n50cu15rk9.eot');
+  src: url('//at.alicdn.com/t/font_593527_otm8r6n50cu15rk9.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_593527_otm8r6n50cu15rk9.woff') format('woff'),
+  url('//at.alicdn.com/t/font_593527_otm8r6n50cu15rk9.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_593527_otm8r6n50cu15rk9.svg#iconfont') format('svg');
+}
+.iconfont{
+  font-family:"iconfont" !important;
+  font-size:16px;font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.zhangyanj:before { content: "\e668";}
+.biyanj:before { content: "\e667";}
+.zhanghu:before { content: "\e6aa";}
+.yanzhengma:before { content: "\e6ab";}
+.icon-test16:before{ content: "\e69d"}
+//侧边栏列表icon
+.iconKehu01:before { content: "\e673";}
+.iconDingdan02:before { content: "\e674";}
+.iconChanpin03:before { content: "\e670";}
+.iconYunying04:before { content: "\e677";}
+.iconCaiwu05:before { content: "\e671";}
+.iconShezhi06:before { content: "\e675";}
+.iconShuju07:before { content: "\e676";}
+.icon-user-name:before{ content:"\e672"}
+//end
+.icon-user-name1:before{ content:"\e685"}
+.icon-mima:before{ content:"\e6a9"}
+.icon-fuhao:before{content:"\e67a"}
+
+//main-container全局样式
+.app-main{
+  min-height: 100%
+}
+
+.app-container {
+  padding: 20px;
+}
+.backfff{
+  background-color: #fff;
+}
+.dis-flex{
+  display: -webkit-box; /* 老版本语法（ Safari, iOS, Android browser, older WebKit browsers） */
+  display: -moz-box;/* 老版本火狐语法 */
+  display: -ms-flexbox; /* 混合版本语法: IE 10 */
+  /* 新语法 */
+  display: -webkit-flex;
+  display: flex;
+}
+.cont-title{
+  font-size: 14px;
+  color: #888;
+  padding: 0 0 20px;
+  font-weight: bold;
+
+}
+.el-menu-item:focus, .el-menu-item:hover{
+  background-color: #e6e8e9;
+}
+
+.clearfix {
+  *zoom:1;
+  &:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+}
+  /*小标题公共处*/
+  .title-comon{
+    font-size: 14px;
+    font-weight: bold;
+    color:#bbbbbb;
+  }
+  /*小版块颜色距离设置*/
+  .distance{
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #fff;
+  }
+/* 切换栏样式 */
+.tab-box{
+  margin-bottom : 20px;
+  border: 1px solid #ddd ;
+  border-top: 1px solid #fff;
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
+  height:44px;
+  // width: 100%;
+  ul{
+    li{
+      float: left;
+      text-align: center;
+      border-bottom: none;
+      background: #f4f5f9;
+      border: 1px solid #ddd ;
+      cursor: pointer;
+      color:#333 ;
+      font-size: 14px;
+      margin-right: -1px;
+      // margin-bottom: -1px;
+      padding:11px 25px;
+      // z-index: 100;
+    }
+    .active{
+      border-top:2px solid #379338 ;
+      background-color:#fff;
+      border-bottom-color: #fff;
+    }
+  }
+}
+.dialog-tab-box{
+  border-radius: 16px;
+  
+  height: 33px;
+  line-height: 33px;
+  overflow: hidden;
+  li{
+    border: solid 1px #ddd;
+    margin-right: -1px;
+    width: 25%;
+    text-align: center;
+    cursor: pointer;
+  }
+  li:first-child{
+    border-radius: 16px 0px 0px 16px;
+  }
+  li:last-child{
+    border-radius: 0px 16px 16px 0px;
+  }
+  li:hover{
+    color: #379338;
+  }
+  .active{
+    background-color: #379338;
+    color: #fff !important;
+    border:1px solid #379338;
+  }
+}
+.cur-pot{
+  cursor: pointer;
+}
+.el-date-editor .el-range-separator{
+  width: 8%;
+}
+.warn-hint{
+  align-items: center;
+  justify-content: center;
+  div:first-child{
+    width: 8%;
+    font-size: 20px;
+    color: #1daa1d;
+  }
+  div:last-child{
+    font-size: 12px;
+    line-height: 24px;
+  }
+}
+/* .tab-lot{
+      width: 100%;
+      height: 100%;
+      border-bottom: 1px solid #ddd;
+    } */
+    //页面顶部列表搜索栏-日期搜索大小-上下左右距离-可在monDetail.vue页面进行参考
+    .searchBox {
+      margin-bottom: 20px;//页面顶部列表搜索栏
+      .mgr{
+        margin-right: 20px;//每个el-col的间隔距离
+      }
+      .search-date{
+        width: 350px;//搜索栏大小的间隔距离
+      }
+    }
+    //页面底部批量操作按钮-结合使用clearfix-可在monDetail.vue页面进行参考
+    .bot-cont{
+      margin: 40px 20px 0 14px;
+    }
+    .el-table th{
+       font-weight: normal;
+    }
+    //界面截图-选择上传框的大小
+    .screenShots{
+      .el-upload--picture-card{
+        width: 200px;
+        height: 400px;
+        line-height: 400px;
+        border-radius: 0;
+      }
+      .el-upload-list--picture-card .el-upload-list__item{
+        width: 200px;
+        height: 340px;
+        border-radius: 0;
+        border: 1px solid #ddd;
+      }
+    }
+    .bannerImg{
+      .el-upload--picture-card{
+        width: 375px;
+        height: 150px;
+        line-height: 150px;
+        border-radius: 0;
+      }
+      .el-upload-list--picture-card .el-upload-list__item{
+        width: 375px;
+        height: 150px;
+        border-radius: 0;
+        border: 1px solid #ddd;
+      }
+    }
+    //弹框样式统一修改
+    .item-grid{
+      div{
+        display: inline-block;
+        padding-top: 20px;
+      }
+      div:first-child{
+        margin-left: 5%;
+        width: 21% !important;
+        color:#888;
+      }
+      div:last-child{
+        width: 68%;
+      }
+      .item-hint{
+        color: #379338;
+      }
+    }
+    //弹框所有感叹号样式修改
+    .warn-hint div:first-child {
+      width: 6% !important;
+    }
+    //表格省略号
+    .ellipsis .cell{
+      overflow: hidden;text-overflow: ellipsis;white-space: nowrap;
+    }
+    .el-banner-card .el-upload-list--picture-card{
+      width: 375px !important;
+      height: 150px !important;
+    }

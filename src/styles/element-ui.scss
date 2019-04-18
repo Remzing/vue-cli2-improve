@@ -1,0 +1,172 @@
+ //to reset element-ui default css
+.el-upload {
+  input[type="file"] {
+    display: none !important;
+  }
+}
+
+.el-upload__input {
+  display: none;
+}
+//统一修改dialog弹框header样式
+.el-dialog__header{
+  border-bottom: 1px solid #eee;
+}
+.el-dialog__body{
+  padding: 20px 20px 0px 20px !important;
+  color: #353535;
+  line-height: 24px;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+//部分弹窗radio样式
+.createOrder .el-radio-group{
+  line-height: 30px !important;
+}
+.createOrder .el-radio-group .el-radio{
+  margin-left: 30px !important;
+}
+
+//统一修改表格样式
+.el-table--striped .el-table__body tr.el-table__row--striped td{
+  background: #fff;
+}
+.el-table--striped .el-table__body tr.el-table__row:hover,
+.el-table--striped .el-table__body tr.el-table__row--striped:hover td{
+  background-color: #f6f8f9;
+}
+.el-table--striped .el-table__body td{
+  border:none;
+}
+.el-menu-item:focus, .el-menu-item:hover{
+  background-color: transparent !important;
+}
+.openRemark .el-form-item__label{
+  width: 122px !important;
+}
+
+//暂时性解决diolag 问题 https://github.com/ElemeFE/element/issues/2461
+.el-dialog {
+  transform: none;
+  left: 0;
+  position: relative;
+  margin: 0 auto;
+}
+
+//element ui upload
+.upload-container {
+  .el-upload {
+    width: 100%;
+    .el-upload-dragger {
+      width: 100%;
+      height: 200px;
+    }
+  }
+}
+//日期控件input修改
+.el-range-editor--medium.el-input__inner{
+  border-radius: 0px;
+}
+//登录注册找回密码页面的input样式修改
+.el-checkbox__input.is-checked .el-checkbox__inner{
+  background-color: #fff;
+}
+.el-checkbox__inner::after{
+  border: 1px solid #3d9738;
+  border-left: 0;
+  border-top: 0;
+}
+// .disabled .el-upload--picture-card{
+//   display: none;
+// }
+//浏览器默认样式问题解决
+textarea,.el-input__inner{
+  font-size: inherit;color: inherit;font-family: inherit;
+}
+//搜索栏input统一修改
+.el-input--medium .el-input__inner{
+  border-radius: 0px;
+  font-size: 12px;
+}
+//payPort页面的表单label修改
+.pay-demo .el-form-item__label{
+  width: 70px !important;
+}
+.pay-demo .el-form-item__content{
+  margin-left: 70px !important;
+}
+//管理组地图树修改
+.el-tree-node__expand-icon.is-leaf{
+  color: transparent;
+  cursor: default;
+  background-color: #fff !important;
+  padding-left: 26px;
+}
+//第一个工作台小icon隐藏
+.el-tree-node__content span.el-tree-node__expand-icon.is-leaf:before{
+  content: '' !important;
+  
+}
+.el-tree-node__content:hover .el-tree-node__expand-icon.is-leaf{
+  background-color: #f6f8f9 !important;
+}
+//+号，未展开后
+.el-tree-node__content .el-icon-caret-right:before{
+  content: "\E601" !important;
+  font-size: 20px;
+  color: #3d9738;
+}
+//+号子列表
+.el-tree-node__children > .is-focusable .el-tree-node__content .el-icon-caret-right:before{
+  content: "\E601" !important;
+  font-size: 20px;
+ color: #3d9738;
+}
+
+
+//-号，展开后
+.el-tree-node__children > .is-focusable .el-tree-node__content span.expanded:before{
+  content: "\E635" !important;
+  font-size: 20px;
+  color: #fa7821;
+}
+
+//-号子列表
+.is-expanded .el-tree-node__content .el-icon-caret-right:before{
+  content: "\E635" !important;
+  font-size: 20px;
+  color: #fa7821;
+  // border-right: 1px dashed #3d9738;
+}
+
+//无子列表时无icon
+.el-tree-node__children > .is-focusable .el-tree-node__content span.is-leaf:before{
+  content: '' !important;
+}
+
+//地图表格行样式修改
+.cityBoxs .el-table__row{
+  height: 48px !important;
+}
+.el-tree-node__children .is-focusable  .expanded,
+.el-tree-node__content .el-tree-node__expand-icon.expanded{
+  transform: none !important;
+  webkit-transform: none !important;
+}
+//展开未展开点击速度
+.collapse-transition{
+  transition: 0s height ease-in-out,0s padding-top ease-in-out,0s padding-bottom ease-in-out !important;
+}
+// .el-checkbox:before{
+//   content: " " !important;
+//   display: inline-block;
+//   width: 22px;
+//   height: 5px;
+//   // border-top: 1px dashed #3d9738;
+// }
+.el-tree-node__content > .el-tree-node__expand-icon{
+  padding: 0 !important;
+}
+// .el-tree-node__children .is-focusable .el-icon-caret-right:before{
+//   color: #fff !important;
+// }
